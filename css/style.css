@@ -1,0 +1,467 @@
+/* Fonts */
+
+@font-face {
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/opensans.woff2") format("woff2"),
+       url("../fonts/opensans.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/opensanslight.woff2") format("woff2"),
+       url("../fonts/opensanslight.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Gilroy";
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/gilroyextrabold.woff2") format("woff2"),
+       url("../fonts/gilroyextrabold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Gilroy";
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/gilroylight.woff2") format("woff2"),
+       url("../fonts/gilroyextrabold.woff") format("woff");
+}
+
+/* Variables */
+
+:root {
+  --basic-black: #000000;
+  --basic-dark: #363636;
+  --basic-white: #ffffff;
+  --basic-grey: #464646;
+  --basic-half-grey: #7e7e7e;
+  --basic-grey-light: #e5e5e5;
+  --special-yellow: #f7e296;
+  --special-green: #91c92f;
+  --special-yellow-dark: #f0c52e;
+  --disabled-field-feedback: #f6dada;
+  --background-field-feedback: #f2f2f2;
+  --background-hover-field-feedback: #eaeaea;
+  --disabled-input-filter: #a6a6a6;
+  --slider-price-filter: #c4c4c4;
+  --background-pagination: #ebebeb;
+  --button-pagination: #d9d9d9;
+  --footer-decorative-element: #ffc600;
+  --transparency: transparent;
+}
+
+/* Global */
+
+.page-body {
+  min-width: 1200px;
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", "Trebuchet MS", sans-serif;
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 300;
+  color: var(--basic-black);
+  background-color: var(--basic-white);
+}
+
+a {
+  text-decoration: none;
+}
+
+/* img {
+  width: 100%;
+  height: auto;
+} */
+
+/* Header */
+
+.header-wrapper {
+  background-color: var(--special-yellow);
+}
+
+.logo {
+  width: 163px;
+  height: 35px;
+}
+
+.logo__link:hover,
+.logo__link:focus {
+  opacity: 0.6;
+}
+
+.logo__link:active {
+  opacity: 0.3;
+}
+
+/* Search */
+
+.search__input {
+  font: inherit;
+  background-color: var(--transparency);
+}
+
+.search__input::placeholder {
+  opacity: 0.3;
+}
+
+.search__input:hover::placeholder {
+  opacity: 0.6;
+}
+
+.search__input:focus {
+  color: var(--basic-black);
+}
+
+.search__input:focus + .search__button {
+  font: inherit;
+  color: var(--basic-black);
+  background-color: var(--transparency);
+  text-transform: uppercase;
+}
+
+.search__input:focus + .search__button:hover,
+.search__button:active {
+  font: inherit;
+  color: var(--basic-white);
+  background-color: var(--basic-black);
+  text-transform: uppercase;
+}
+
+.search__button:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+/* Personal list */
+
+.personal-list {
+  list-style: none;
+}
+
+.personal-list__link {
+  color: var(--basic-black);
+}
+
+.personal-list__link:hover,
+.personal-list__link:focus {
+  opacity: 0.6;
+}
+
+.personal-list__link:active {
+  opacity: 0.3;
+}
+
+/* Navigation */
+
+.menu-list,
+.submenu-list {
+  list-style: none;
+}
+
+.menu-list__link {
+  font-family: "Gilroy", "Trebuchet MS", sans-serif;
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+.menu-list__link,
+.submenu-list__link {
+  color: var(--basic-black);
+}
+
+.menu-list__link:hover,
+.menu-list__link:focus,
+.submenu-list__link:hover,
+.submenu-list__link:focus {
+  opacity: 0.6;
+}
+
+.menu-list__link:active,
+.submenu-list__link:active {
+  opacity: 0.3;
+}
+
+/* Sliders */
+
+.slide__number {
+  font-family: "Gilroy", "Trebuchet MS", sans-serif;
+  font-size: 179px;
+  line-height: 219px;
+  font-weight: 800;
+  color: var(--basic-white);
+  text-transform: uppercase;
+  background-color: var(--special-yellow);
+}
+
+.slide__title {
+  font-family: "Gilroy", "Trebuchet MS", sans-serif;
+  font-size: 47px;
+  line-height: 58px;
+  font-weight: 800;
+}
+
+/* Button */
+
+.button {
+  display: inline-block;
+  padding: 9px 43px;
+  font-family: "Gilroy", "Trebuchet MS", sans-serif;
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  color: var(--basic-black);
+  text-align: center;
+  vertical-align: middle;
+  text-transform: uppercase;
+  border: none;
+  background: none;
+  background-image: linear-gradient(to top,
+    var(--transparency) 16px,
+    var(--special-yellow-dark) 16px,
+    var(--special-yellow-dark) 24px,
+    var(--transparency) 24px,
+    var(--transparency) 40px);
+  cursor: pointer;
+}
+
+.button:hover,
+.button:focus {
+  background: var(--special-yellow-dark);
+}
+
+.button:active {
+  color: rgba(0, 0, 0, 0.3);
+  outline: none;
+}
+
+/* Slider Table */
+
+.slide__table-cell,
+.slide__table-title {
+  font-family: "Gilroy", "Trebuchet MS", sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+}
+
+.slide__table-cell {
+  font-size: 36px;
+  line-height: 42px;
+}
+
+.slide__table-title {
+  font-size: 13px;
+  line-height: 15px;
+}
+
+/* Popular list products */
+
+.popular-list {
+  list-style: none;
+}
+
+.popular-list__item {
+  background-color: var(--special-yellow);
+}
+
+.popular-list__item:hover,
+.popular-list__item:focus {
+  background-color: var(--special-yellow-dark);
+}
+
+.popular-list__link {
+  display: block;
+  font-family: "Gilroy", "Trebuchet MS", sans-serif;
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 800;
+  color: var(--basic-black);
+  letter-spacing: 0.05em;
+}
+
+.popular-list__link:active {
+  opacity: 0.3;
+}
+
+/* Services */
+
+.services {
+  background-color: var(--basic-grey-light);
+}
+
+.services-controls__label:active,
+.services-controls__input[id="service-1"]:checked ~ .services-controls__title label[for="service-1"],
+.services-controls__input[id="service-2"]:checked ~ .services-controls__title label[for="service-2"],
+.services-controls__input[id="service-3"]:checked ~ .services-controls__title label[for="service-3"] {
+  color: var(--special-yellow);
+  background: var(--basic-black);
+}
+
+.service__title,
+.about__title,
+.contacts__title {
+  font-family: "Gilroy", "Trebuchet MS", sans-serif;
+  font-size: 47px;
+  line-height: 58px;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+}
+
+.service__desc {
+  line-height: 30px;
+  letter-spacing: 0.1em;
+}
+
+/* Brands */
+
+.brands-list {
+  list-style: none;
+}
+
+/* About, Contacts */
+
+.about__text,
+.contacts__text {
+  line-height: 28px;
+}
+
+.about-list {
+  list-style: none;
+}
+
+.about-list__item {
+  font-family: "Gilroy", "Trebuchet MS", sans-serif;
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 800;
+}
+
+/* Footer */
+
+.page-footer {
+  background-color: var(--basic-dark);
+}
+
+.personal-list__link--footer {
+  color: var(--basic-white);
+  opacity: 0.7;
+}
+
+.personal-list__link--footer:hover,
+.personal-list__link--footer:focus {
+  opacity: 1;
+}
+
+.personal-list__link--footer:active {
+  opacity: 0.3;
+}
+
+.footer-address {
+  font-style: normal;
+  color: var(--basic-white);
+}
+
+.menu-list__link--footer {
+  color: var(--basic-white);
+}
+
+.menu-list__link--footer:hover,
+.menu-list__link--footer:focus {
+  opacity: 0.6;
+}
+
+.menu-list__link--footer:active {
+  opacity: 0.3;
+}
+
+.footer-phone {
+  color: var(--basic-white);
+}
+
+/* Social */
+
+.social-list {
+  list-style: none;
+}
+
+.social-list__item {
+  text-align: center;
+}
+
+.social-list__link {
+  color: var(--basic-white);
+}
+
+.social-list__icon {
+  fill: var(--basic-white);
+  fill-opacity: 0.3;
+}
+
+.social-list__link:hover,
+.social-list__link:focus {
+  opacity: 0.6;
+}
+
+.social-list__link:active {
+  opacity: 0.1;
+}
+
+.layout-developer {
+  color: var(--special-yellow-dark);
+}
+
+/* Modal */
+
+.modal {
+  background-color: var(--basic-white);
+}
+
+.feedback-form__label {
+  font-family: "Gilroy", "Trebuchet MS", sans-serif;
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 800;
+}
+
+.feedback-form__input,
+.feedback-form__textarea {
+  font: inherit;
+  font-size: 14px;
+  line-height: 19px;
+  font-weight: 400;
+  background-color: var(--background-field-feedback);
+  border: none;
+}
+
+.feedback-form__input::placeholder,
+.feedback-form__textarea::placeholder {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.feedback-form__input:hover {
+  background-color: var(--background-hover-field-feedback);
+}
+
+.feedback-form__input:focus {
+  background-color: var(--basic-white);
+  border: 2px solid var(--special-yellow);
+  outline: none;
+}
+
+.feedback-form__input:invalid {
+  background-color: var(--disabled-field-feedback);
+  border: none;
+}
+
+
