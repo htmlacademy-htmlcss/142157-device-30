@@ -455,7 +455,24 @@ img {
 
 /* Catalog */
 
+.page-main-catalog {
+  display: grid;
+  grid-template-columns: 330px 1fr;
+  align-content: start;
+}
+
+.catalog-grid {
+  grid-column: 1/-1;
+}
+
+.catalog-wrapper {
+  padding-left: 60px;
+}
+
 .page-title {
+  margin: 0;
+  margin-bottom: 30px;
+  padding: 0;
   font-family: "Gilroy", "Trebuchet MS", sans-serif;
   font-size: 47px;
   line-height: 58px;
@@ -465,6 +482,9 @@ img {
 /* Breadcrumbs */
 
 .breadcrumbs {
+  margin: 0;
+  margin-bottom: 50px;
+  padding: 0;
   list-style: none;
 }
 
@@ -486,6 +506,10 @@ img {
 }
 
 /* Filter */
+
+.catalog-filter {
+  grid-row: 2/4;
+}
 
 .catalog-filter,
 .sorting {
@@ -522,6 +546,8 @@ img {
 }
 
 .form__list {
+  margin: 0;
+  padding: 0;
   list-style: none;
   font-size: 14px;
   line-height: 19px;
@@ -529,7 +555,14 @@ img {
 
 /* Sorting Catalog */
 
+.sorting {
+  margin-bottom: 70px;
+  padding-left: 70px;
+}
+
 .sorting-list {
+  margin: 0;
+  padding: 0;
   list-style: none;
   font-size: 14px;
   line-height: 19px;
@@ -552,6 +585,14 @@ img {
 }
 
 /* Product Card */
+
+.catalog {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 40px;
+  margin-left: 70px;
+  margin-bottom: 80px;
+}
 
 .product-card__img {
   width: 360px;
@@ -602,6 +643,9 @@ img {
 /* Pagination */
 
 .pagination-list {
+  grid-column: 1/-1;
+  margin: 0;
+  padding: 0;
   list-style: none;
   font-family: "Gilroy", "Trebuchet MS", sans-serif;
   font-size: 16px;
