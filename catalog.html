@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,32 +14,34 @@
 
   <body class="page-body">
 
-    <header class="page-header">
+    <header class="page-header container">
       <div class="header-wrapper">
         <div class="logo">
           <a class="logo__link" href="index.html">
             <img src="img/icon/logo.svg" width="163" height="35" alt="Логотип">
           </a>
         </div>
-        <form class="search" action="https://echo.htmlacademy.ru" method="get">
-          <label class="search__label" for="search-field">Поиск</label>
-          <input class="search__input" id="search-field" type="text" name="search" placeholder="Поиск по сайту">
-          <button class="search__button" type="submit">Найти</button>
-        </form>
-        <ul class="personal-list">
-          <li class="personal-list__item">
-            <a class="personal-list__link" href="#">Валентин Петухов</a>
-          </li>
-          <li class="personal-list__item">
-            <a class="personal-list__link personal-list__link--exit" href="#">Выйти</a>
-          </li>
-          <li class="personal-list__item">
-            <a class="personal-list__link" href="#">Сравнить</a>
-          </li>
-          <li class="personal-list__item">
-            <a class="personal-list__link" href="#">Корзина</a>
-          </li>
-        </ul>
+        <div class="block-wrapper">
+          <form class="search" action="https://echo.htmlacademy.ru" method="get">
+            <label class="search__label" for="search-field">Поиск</label>
+            <input class="search__input" id="search-field" type="text" name="search" placeholder="Поиск по сайту">
+            <button class="search__button" type="submit">Найти</button>
+          </form>
+          <ul class="personal-list">
+            <li class="personal-list__item">
+              <a class="personal-list__link" href="#">Валентин Петухов</a>
+            </li>
+            <li class="personal-list__item">
+              <a class="personal-list__link personal-list__link--exit" href="#">Выйти</a>
+            </li>
+            <li class="personal-list__item">
+              <a class="personal-list__link" href="#">Сравнить</a>
+            </li>
+            <li class="personal-list__item">
+              <a class="personal-list__link" href="#">Корзина</a>
+            </li>
+          </ul>
+        </div>
 
         <nav class="navigation">
           <ul class="menu-list">
@@ -80,68 +82,73 @@
       </div>
   </header>
 
-  <main>
-    <h1 class="page-title">Моноподы для селфи</h1>
-
-    <ul class="breadcrumbs">
-      <li class="breadcrumbs__item">
-        <a class="breadcrumbs__link" href="index.html">Главная</a>
-      </li>
-      <li class="breadcrumbs__item">
-        <a class="breadcrumbs__link" href="#">Каталог товаров</a>
-      </li>
-      <li class="breadcrumbs__item breadcrumbs__item--current">Моноподы для селфи</li>
-    </ul>
+  <main class="page-main-catalog container">
+    <div class="catalog-grid">
+      <div class="catalog-wrapper">
+        <h1 class="page-title">Моноподы для селфи</h1>
+        <ul class="breadcrumbs">
+          <li class="breadcrumbs__item">
+            <a class="breadcrumbs__link" href="index.html">Главная</a>
+          </li>
+          <li class="breadcrumbs__item">
+            <a class="breadcrumbs__link" href="#">Каталог товаров</a>
+          </li>
+          <li class="breadcrumbs__item breadcrumbs__item--current">Моноподы для селфи</li>
+        </ul>
+      </div>
+    </div>
 
     <section class="catalog-filter">
-      <h2 class="catalog-filter__title">Фильтр:</h2>
-      <form class="form" action="https://echo.htmlacademy.ru" method="post">
-        <div class="price-selection">
-          <p class="form__title">Стоимость</p>
-          <!--Здесь будут ползунки-маркеры стоимости, пока хз как их делать-->
-          <input class="price-selection__input" type="text" name="min-price" placeholder="От 0">
-          <input class="price-selection__input" type="text" name="max-price" placeholder="До 5000">
-        </div>
-        <fieldset>
-          <legend class="form__title">Цвет</legend>
-          <ul class="form__list">
-            <li class="form__item">
-              <input class="form__input-checkbox" type="checkbox" name="black" id="filter-black" checked>
-              <label for="filter-black">Чёрный</label>
-            </li>
-            <li class="form__item">
-              <input class="form__input-checkbox" type="checkbox" name="white" id="filter-white">
-              <label for="filter-white">Белый</label>
-            </li>
-            <li class="form__item">
-              <input class="form__input-checkbox" type="checkbox" name="blue" id="filter-blue" checked>
-              <label for="filter-blue">Синий</label>
-            </li>
-            <li class="form__item">
-              <input class="form__input-checkbox" type="checkbox" name="red" id="filter-red" checked>
-              <label for="filter-red">Красный</label>
-            </li>
-            <li class="form__item">
-              <input class="form__input-checkbox" type="checkbox" name="pink" id="filter-pink">
-              <label for="filter-pink">Розовый</label>
-            </li>
-          </ul>
-        </fieldset>
-        <fieldset>
-          <legend class="form__title">Bluetooth</legend>
-          <ul class="form__list">
-            <li class="form__item">
-              <input type="radio" name="bluetooth" id="bl-yes" value="yes" checked>
-              <label for="bl-yes">Есть</label>
-            </li>
-            <li class="form__item">
-              <input type="radio" name="bluetooth" id="bl-no" value="no">
-              <label for="bl-no">Нет</label>
-            </li>
-          </ul>
-        </fieldset>
-        <button class="button" type="submit">Показать</button>
-      </form>
+        <div class="catalog-wrapper">
+        <h2 class="catalog-filter__title">Фильтр:</h2>
+        <form class="form" action="https://echo.htmlacademy.ru" method="post">
+          <div class="price-selection">
+            <p class="form__title">Стоимость</p>
+            <!--Здесь будут ползунки-маркеры стоимости, пока хз как их делать-->
+            <input class="price-selection__input" type="text" name="min-price" placeholder="От 0">
+            <input class="price-selection__input" type="text" name="max-price" placeholder="До 5000">
+          </div>
+          <fieldset>
+            <legend class="form__title">Цвет</legend>
+            <ul class="form__list">
+              <li class="form__item">
+                <input class="form__input-checkbox" type="checkbox" name="black" id="filter-black" checked>
+                <label for="filter-black">Чёрный</label>
+              </li>
+              <li class="form__item">
+                <input class="form__input-checkbox" type="checkbox" name="white" id="filter-white">
+                <label for="filter-white">Белый</label>
+              </li>
+              <li class="form__item">
+                <input class="form__input-checkbox" type="checkbox" name="blue" id="filter-blue" checked>
+                <label for="filter-blue">Синий</label>
+              </li>
+              <li class="form__item">
+                <input class="form__input-checkbox" type="checkbox" name="red" id="filter-red" checked>
+                <label for="filter-red">Красный</label>
+              </li>
+              <li class="form__item">
+                <input class="form__input-checkbox" type="checkbox" name="pink" id="filter-pink">
+                <label for="filter-pink">Розовый</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset>
+            <legend class="form__title">Bluetooth</legend>
+            <ul class="form__list">
+              <li class="form__item">
+                <input type="radio" name="bluetooth" id="bl-yes" value="yes" checked>
+                <label for="bl-yes">Есть</label>
+              </li>
+              <li class="form__item">
+                <input type="radio" name="bluetooth" id="bl-no" value="no">
+                <label for="bl-no">Нет</label>
+              </li>
+            </ul>
+          </fieldset>
+          <button class="button" type="submit">Показать</button>
+        </form>
+      </div>
     </section>
 
     <section class="sorting">
@@ -166,7 +173,7 @@
     </section>
 
     <section class="catalog">
-      <h2>Список товаров</h2>
+      <!-- <h2>Список товаров</h2> Спрячем пока от грида -->
       <article class="product-card">
         <div class="product-card__img">
           <img src="img/catalog/item-1.jpg" width="360" height="380" alt="Любительская селфи-палка">
@@ -242,73 +249,74 @@
   </main>
 
   <footer class="page-footer">
-
-    <div class="footer-container">
-      <div class="logo">
-        <a class="logo__link" href="index.html">
-          <img src="img/icon/footer-logo.svg" width="163" height="35" alt="Логотип">
-        </a>
+    <div class="footer-wrapper container">
+      <div class="footer-container-logo">
+        <div class="logo">
+          <a class="logo__link" href="index.html">
+            <img src="img/icon/footer-logo.svg" width="163" height="35" alt="Логотип">
+          </a>
+        </div>
+        <address class="footer-address">г. Москва, ул. Строителей, 15</address>
       </div>
-      <ul class="personal-list">
-        <li class="personal-list__item">
-          <a class="personal-list__link personal-list__link--footer" href="#">Валентин Петухов</a>
-        </li>
-        <li class="personal-list__item">
-          <a class="personal-list__link personal-list__link--footer" href="#">Выйти</a>
-        </li>
-        <li class="personal-list__item">
-          <a class="personal-list__link personal-list__link--footer" href="#">Сравнить</a>
-        </li>
-        <li class="personal-list__item">
-          <a class="personal-list__link personal-list__link--footer" href="#">Корзина</a>
-        </li>
-      </ul>
-    </div>
 
-    <div class="footer-container">
-      <address class="footer-address">г. Москва, ул. Строителей, 15</address>
-      <ul class="menu-list">
-        <li class="menu-list__item">
-          <a class="menu-list__link menu-list__link--footer" href="#">Доставка</a>
-        </li>
-        <li class="menu-list__item">
-          <a class="menu-list__link menu-list__link--footer" href="#">Гарантия</a>
-        </li>
-        <li class="menu-list__item">
-          <a class="menu-list__link menu-list__link--footer" href="#">Контакты</a>
-        </li>
-      </ul>
-      <a class="footer-phone" href="tel:+74954959595">Тел.: +7 (495) 495-95-95</a>
-    </div>
+      <div class="footer-container-social">
+        <ul class="menu-list">
+          <li class="menu-list__item">
+            <a class="menu-list__link menu-list__link--footer" href="#">Доставка</a>
+          </li>
+          <li class="menu-list__item">
+            <a class="menu-list__link menu-list__link--footer" href="#">Гарантия</a>
+          </li>
+          <li class="menu-list__item">
+            <a class="menu-list__link menu-list__link--footer" href="#">Контакты</a>
+          </li>
+        </ul>
+        <ul class="social-list">
+          <li class="social-list__item">
+            <a class="social-list__link" href="#">
+              <span>Фейсбук</span>
+              <svg class="social-list__icon" width="32" height="32" xmlns="http://www.w3.org/2000/svg">
+                <path d="M32 16a16 16 0 10-18.5 15.8V20.62H9.44V16h4.06v-3.53c0-4 2.39-6.22 6.04-6.22 1.75 0 3.58.31 3.58.31v3.94h-2.01c-1.99 0-2.61 1.23-2.61 2.5v3h4.44l-.71 4.63H18.5V31.8A16 16 0 0032 16z"/>
+              </svg>
+            </a>
+          </li>
+          <li class="social-list__item">
+            <a class="social-list__link" href="#">
+              <span>Инстаграмм</span>
+              <svg class="social-list__icon" width="32" height="32" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21 16a5 5 0 11-9.92-.83H9.33v6.66c0 .46.38.84.84.84h11.66a.84.84 0 00.84-.84v-6.66h-1.75c.05.27.08.54.08.83zm-5 3.33a3.33 3.33 0 100-6.66 3.33 3.33 0 000 6.66zm4-6.83h2a.5.5 0 00.5-.5v-2a.5.5 0 00-.5-.5h-2a.5.5 0 00-.5.5v2c0 .28.23.5.5.5zM16 0a16 16 0 100 32 16 16 0 000-32zm8.33 22.48c0 1.02-.83 1.85-1.85 1.85H9.52a1.86 1.86 0 01-1.85-1.85V9.52c0-1.02.83-1.85 1.85-1.85h12.96c1.02 0 1.85.83 1.85 1.85v12.96z"/>
+              </svg>
+            </a>
+          </li>
+          <li class="social-list__item">
+            <a class="social-list__link" href="#">
+              <span>Твиттер</span>
+              <svg class="social-list__icon" width="32" height="32" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16 32a15.7 15.7 0 01-6.22-1.27 16.02 16.02 0 01-5.1-3.4 16.02 16.02 0 01-3.41-5.11A15.7 15.7 0 010 16c0-2.17.42-4.24 1.27-6.22a16.02 16.02 0 013.4-5.1 16.02 16.02 0 015.11-3.41A15.7 15.7 0 0116 0c2.17 0 4.24.42 6.22 1.27 1.98.84 3.68 1.97 5.1 3.4a16.02 16.02 0 013.41 5.11A15.7 15.7 0 0132 16c0 2.17-.42 4.24-1.27 6.22a16.02 16.02 0 01-3.4 5.1 16.02 16.02 0 01-5.11 3.41A15.7 15.7 0 0116 32zm9.4-24c-.12.06-.3.18-.56.34l-.6.41-.58.31-.66.22A3.68 3.68 0 0020.16 8c-2.44 0-3.66 1.02-3.66 3.06v1.85c-3.35-.17-5.93-1.4-7.72-3.7A2.52 2.52 0 008 11c0 1.38.51 2.42 1.53 3.13-.12 0-.3 0-.53.03-.23.02-.41.02-.55 0A1.57 1.57 0 018 14c0 .96.26 1.76.77 2.4a3.53 3.53 0 002.1 1.23c-.2.25-.5.37-.87.37-.33 0-.63-.1-.88-.28 0 .81.4 1.44 1.18 1.89.78.45 1.66.68 2.64.7-.38.57-.92.99-1.64 1.27-.72.28-1.49.42-2.3.42-.3 0-.7-.07-1.2-.22l-.8-.22c.33.67 1.02 1.24 2.05 1.72 1.03.48 2.34.72 3.92.72a10.3 10.3 0 007-2.69A13.08 13.08 0 0024 12c0-.04.13-.13.38-.27.25-.13.54-.31.87-.54.33-.23.58-.47.75-.72-1.13 0-1.88.02-2.25.06.73-.44 1.28-1.28 1.66-2.53z"/>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
 
-    <div class="footer-container">
-      <ul class="social-list">
-        <li class="social-list__item">
-          <a class="social-list__link" href="#">
-            <span>Фейсбук</span>
-            <svg class="social-list__icon" width="32" height="32" xmlns="http://www.w3.org/2000/svg">
-              <path d="M32 16a16 16 0 10-18.5 15.8V20.62H9.44V16h4.06v-3.53c0-4 2.39-6.22 6.04-6.22 1.75 0 3.58.31 3.58.31v3.94h-2.01c-1.99 0-2.61 1.23-2.61 2.5v3h4.44l-.71 4.63H18.5V31.8A16 16 0 0032 16z"/>
-            </svg>
-          </a>
-        </li>
-        <li class="social-list__item">
-          <a class="social-list__link" href="#">
-            <span>Инстаграмм</span>
-            <svg class="social-list__icon" width="32" height="32" xmlns="http://www.w3.org/2000/svg">
-              <path d="M21 16a5 5 0 11-9.92-.83H9.33v6.66c0 .46.38.84.84.84h11.66a.84.84 0 00.84-.84v-6.66h-1.75c.05.27.08.54.08.83zm-5 3.33a3.33 3.33 0 100-6.66 3.33 3.33 0 000 6.66zm4-6.83h2a.5.5 0 00.5-.5v-2a.5.5 0 00-.5-.5h-2a.5.5 0 00-.5.5v2c0 .28.23.5.5.5zM16 0a16 16 0 100 32 16 16 0 000-32zm8.33 22.48c0 1.02-.83 1.85-1.85 1.85H9.52a1.86 1.86 0 01-1.85-1.85V9.52c0-1.02.83-1.85 1.85-1.85h12.96c1.02 0 1.85.83 1.85 1.85v12.96z"/>
-            </svg>
-          </a>
-        </li>
-        <li class="social-list__item">
-          <a class="social-list__link" href="#">
-            <span>Твиттер</span>
-            <svg class="social-list__icon" width="32" height="32" xmlns="http://www.w3.org/2000/svg">
-              <path d="M16 32a15.7 15.7 0 01-6.22-1.27 16.02 16.02 0 01-5.1-3.4 16.02 16.02 0 01-3.41-5.11A15.7 15.7 0 010 16c0-2.17.42-4.24 1.27-6.22a16.02 16.02 0 013.4-5.1 16.02 16.02 0 015.11-3.41A15.7 15.7 0 0116 0c2.17 0 4.24.42 6.22 1.27 1.98.84 3.68 1.97 5.1 3.4a16.02 16.02 0 013.41 5.11A15.7 15.7 0 0132 16c0 2.17-.42 4.24-1.27 6.22a16.02 16.02 0 01-3.4 5.1 16.02 16.02 0 01-5.11 3.41A15.7 15.7 0 0116 32zm9.4-24c-.12.06-.3.18-.56.34l-.6.41-.58.31-.66.22A3.68 3.68 0 0020.16 8c-2.44 0-3.66 1.02-3.66 3.06v1.85c-3.35-.17-5.93-1.4-7.72-3.7A2.52 2.52 0 008 11c0 1.38.51 2.42 1.53 3.13-.12 0-.3 0-.53.03-.23.02-.41.02-.55 0A1.57 1.57 0 018 14c0 .96.26 1.76.77 2.4a3.53 3.53 0 002.1 1.23c-.2.25-.5.37-.87.37-.33 0-.63-.1-.88-.28 0 .81.4 1.44 1.18 1.89.78.45 1.66.68 2.64.7-.38.57-.92.99-1.64 1.27-.72.28-1.49.42-2.3.42-.3 0-.7-.07-1.2-.22l-.8-.22c.33.67 1.02 1.24 2.05 1.72 1.03.48 2.34.72 3.92.72a10.3 10.3 0 007-2.69A13.08 13.08 0 0024 12c0-.04.13-.13.38-.27.25-.13.54-.31.87-.54.33-.23.58-.47.75-.72-1.13 0-1.88.02-2.25.06.73-.44 1.28-1.28 1.66-2.53z"/>
-            </svg>
-          </a>
-        </li>
-      </ul>
-      <a class="layout-developer" href="https://htmlacademy.ru/intensive/htmlcss" target="_blank" rel="noopener nofollow">Интенсив от HTML Acacdemy</a>
+      <div class="footer-container-info">
+        <ul class="personal-list">
+          <li class="personal-list__item">
+            <a class="personal-list__link personal-list__link--footer" href="#">Валентин Петухов</a>
+          </li>
+          <li class="personal-list__item">
+            <a class="personal-list__link personal-list__link--footer" href="#">Выйти</a>
+          </li>
+          <li class="personal-list__item">
+            <a class="personal-list__link personal-list__link--footer" href="#">Сравнить</a>
+          </li>
+          <li class="personal-list__item">
+            <a class="personal-list__link personal-list__link--footer" href="#">Корзина</a>
+          </li>
+        </ul>
+        <a class="footer-phone" href="tel:+74954959595">Тел.: +7 (495) 495-95-95</a>
+        <a class="layout-developer" href="https://htmlacademy.ru/intensive/htmlcss" target="_blank" rel="noopener nofollow">Интенсив от HTML Acacdemy</a>
+      </div>
     </div>
   </footer>
 
