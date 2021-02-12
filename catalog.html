@@ -16,7 +16,7 @@
 
     <header class="page-header container">
       <div class="header-wrapper">
-        <div class="logo">
+        <div class="logo logo--indent">
           <a class="logo__link" href="index.html">
             <img src="img/icon/logo.svg" width="163" height="35" alt="Логотип">
           </a>
@@ -27,14 +27,14 @@
             <input class="search__input" id="search-field" type="text" name="search" placeholder="Поиск по сайту">
             <button class="search__button" type="submit">Найти</button>
           </form>
-          <ul class="personal-list">
-            <li class="personal-list__item">
+          <ul class="personal-list personal-list--header-align">
+            <li class="personal-list__item personal-list__item--username">
               <a class="personal-list__link" href="#">Валентин Петухов</a>
             </li>
             <li class="personal-list__item">
               <a class="personal-list__link personal-list__link--exit" href="#">Выйти</a>
             </li>
-            <li class="personal-list__item">
+            <li class="personal-list__item personal-list__item--indent">
               <a class="personal-list__link" href="#">Сравнить</a>
             </li>
             <li class="personal-list__item">
@@ -44,7 +44,7 @@
         </div>
 
         <nav class="navigation">
-          <ul class="menu-list">
+          <ul class="menu-list menu-list--header-align">
             <li class="menu-list__item">
               <a class="menu-list__link" href="catalog.html">Каталог товаров</a>
               <ul class="menu-list__submenu submenu-list">
@@ -99,7 +99,7 @@
     </div>
 
     <section class="catalog-filter">
-        <div class="catalog-wrapper">
+      <div class="catalog-wrapper">
         <h2 class="catalog-filter__title">Фильтр:</h2>
         <form class="form" action="https://echo.htmlacademy.ru" method="post">
           <div class="price-selection">
@@ -108,7 +108,7 @@
             <input class="price-selection__input" type="text" name="min-price" placeholder="От 0">
             <input class="price-selection__input" type="text" name="max-price" placeholder="До 5000">
           </div>
-          <fieldset>
+          <fieldset class="form__fieldset">
             <legend class="form__title">Цвет</legend>
             <ul class="form__list">
               <li class="form__item">
@@ -133,7 +133,7 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset>
+          <fieldset class="form__fieldset">
             <legend class="form__title">Bluetooth</legend>
             <ul class="form__list">
               <li class="form__item">
@@ -163,7 +163,7 @@
         <li class="sorting-list__item">
           <a class="sorting-list__link" href="#">По популярности</a>
         </li>
-        <li class="sorting-list__item">
+        <li class="sorting-list__item sorting-list__item--indent">
           <a class="sorting-list__link" href="#">По возрастанию</a>
         </li>
         <li class="sorting-list__item">
@@ -175,6 +175,7 @@
     <section class="catalog">
       <!-- <h2>Список товаров</h2> Спрячем пока от грида -->
       <article class="product-card">
+        <div class="product-card__mark mark mark--hidden">New</div>
         <div class="product-card__img">
           <img src="img/catalog/item-1.jpg" width="360" height="380" alt="Любительская селфи-палка">
         </div>
@@ -188,6 +189,7 @@
         <button class="compare-btn" type="button">Добавить к сравнению</button>
       </article>
       <article class="product-card">
+        <div class="product-card__mark mark mark--hidden">New</div>
         <div class="product-card__img">
           <img src="img/catalog/item-2.jpg" width="360" height="380" alt="Профессиональная селфи-палка">
         </div>
@@ -201,6 +203,7 @@
         <button class="compare-btn" type="button">Добавить к сравнению</button>
       </article>
       <article class="product-card">
+        <div class="product-card__mark mark mark--hidden">New</div>
         <div class="product-card__img">
           <img src="img/catalog/item-3.jpg" width="360" height="380" alt="Непотопляемая селфи-палка">
         </div>
@@ -214,7 +217,7 @@
         <button class="compare-btn" type="button">Добавить к сравнению</button>
       </article>
       <article class="product-card">
-        <div>New</div>
+        <div class="product-card__mark mark">New</div>
         <div class="product-card__img">
           <img src="img/catalog/item-4.jpg" width="360" height="380" alt="Селфи-палка «Следуй за мной»">
         </div>
@@ -232,7 +235,7 @@
         <li class="pagination-list__item">
           <a class="pagination-list__link pagination-list__link--active pagination-list__link--prev-next" href="#">Назад</a>
         </li>
-        <li class="pagination-list__item">
+        <li class="pagination-list__item pagination-list__item--indent">
           <a class="pagination-list__link pagination-list__link--number pagination-list__link--active">1</a>
         </li>
         <li class="pagination-list__item">
@@ -241,7 +244,7 @@
         <li class="pagination-list__item">
           <a class="pagination-list__link pagination-list__link--number" href="#">3</a>
         </li>
-        <li class="pagination-list__item">
+        <li class="pagination-list__item pagination-list__item--indent">
           <a class="pagination-list__link pagination-list__link--active pagination-list__link--prev-next" href="#">Вперед</a>
         </li>
       </ul>
@@ -251,7 +254,7 @@
   <footer class="page-footer">
     <div class="footer-wrapper container">
       <div class="footer-container-logo">
-        <div class="logo">
+        <div class="logo logo--footer-indent">
           <a class="logo__link" href="index.html">
             <img src="img/icon/footer-logo.svg" width="163" height="35" alt="Логотип">
           </a>
@@ -260,7 +263,7 @@
       </div>
 
       <div class="footer-container-social">
-        <ul class="menu-list">
+        <ul class="menu-list menu-list--footer-align">
           <li class="menu-list__item">
             <a class="menu-list__link menu-list__link--footer" href="#">Доставка</a>
           </li>
@@ -300,7 +303,7 @@
       </div>
 
       <div class="footer-container-info">
-        <ul class="personal-list">
+        <ul class="personal-list personal-list--footer-align">
           <li class="personal-list__item">
             <a class="personal-list__link personal-list__link--footer" href="#">Валентин Петухов</a>
           </li>
