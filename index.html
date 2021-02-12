@@ -16,7 +16,7 @@
 
     <header class="page-header container">
       <div class="header-wrapper">
-        <div class="logo">
+        <div class="logo logo--indent">
           <a class="logo__link">
             <img src="img/icon/logo.svg" width="163" height="35" alt="Логотип">
           </a>
@@ -27,11 +27,11 @@
             <input class="search__input" id="search-field" type="text" name="search" placeholder="Поиск по сайту">
             <button class="search__button" type="submit">Найти</button>
           </form>
-          <ul class="personal-list">
+          <ul class="personal-list personal-list--header-align">
             <li class="personal-list__item">
               <a class="personal-list__link" href="#">Войти</a>
             </li>
-            <li class="personal-list__item">
+            <li class="personal-list__item personal-list__item--indent">
               <a class="personal-list__link" href="#">Сравнить</a>
             </li>
             <li class="personal-list__item">
@@ -41,7 +41,7 @@
         </div>
 
         <nav class="navigation">
-          <ul class="menu-list">
+          <ul class="menu-list menu-list--header-align">
             <li class="menu-list__item">
               <a class="menu-list__link" href="catalog.html">Каталог товаров</a>
               <ul class="menu-list__submenu submenu-list">
@@ -100,7 +100,9 @@
           </div>
 
           <div class="slide">
-            <img class="slide__img" src="img/catalog/slider-1.png" alt="Самая длинная палка для селфи" width="384" height="486">
+            <div class="slide__img">
+              <img src="img/catalog/slider-1.png" alt="Самая длинная палка для селфи" width="384" height="486">
+            </div>
             <div class="slide-wrapper">
               <p class="slide__number">01</p>
               <p class="slide__title">Делай селфи, как Бен Стиллер!</p>
@@ -109,52 +111,62 @@
               </p>
               <a class="button" href="#">Подробнее</a>
               <table class="slide__table">
-                <tr>
-                  <th class="slide__table-title">Длина палки</th>
-                  <th class="slide__table-title">Вес палки</th>
-                  <th class="slide__table-title">Материал</th>
-                </tr>
-                <tr>
-                  <td class="slide__table-cell">8,5 м</td>
-                  <td class="slide__table-cell">5 кг</td>
-                  <td class="slide__table-cell">Карбон</td>
-                </tr>
+                <tbody class="slide__table-main">
+                  <tr class="slide__table-row-title">
+                    <th class="slide__table-title">Длина палки</th>
+                    <th class="slide__table-title">Вес палки</th>
+                    <th class="slide__table-title">Материал</th>
+                  </tr>
+                  <tr>
+                    <td class="slide__table-cell">8,5 м</td>
+                    <td class="slide__table-cell">5 кг</td>
+                    <td class="slide__table-cell">Карбон</td>
+                  </tr>
+                </tbody>
               </table>
             </div>
           </div>
           <div class="slide">
-            <img class="slide__img" src="img/catalog/slider-2.png" alt="Мотивирующий фитнес-браслет" width="345" height="485">
+            <div class="slide__img">
+              <img src="img/catalog/slider-2.png" alt="Мотивирующий фитнес-браслет" width="345" height="485">
+            </div>
             <div class="slide-wrapper">
               <p class="slide__number">02</p>
               <p class="slide__title">Худеем правильно!</p>
               <p class="slide__text">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
               <a class="button" href="#">Подробнее</a>
               <table class="slide__table">
-                <tr>
-                  <th class="slide__table-title">Без подзарядки</th>
-                </tr>
-                <tr>
-                  <td class="slide__table-cell">48 часов</td>
-                </tr>
+                <tbody class="slide__table-main">
+                  <tr class="slide__table-row-title">
+                    <th class="slide__table-title">Без подзарядки</th>
+                  </tr>
+                  <tr>
+                    <td class="slide__table-cell">48 часов</td>
+                  </tr>
+                </tbody>
               </table>
             </div>
           </div>
           <div class="slide">
-            <img class="slide__img" src="img/catalog/slider-3.png" alt="Квадрокоптер с мощным лазером" width="526" height="334">
+            <div class="slide__img">
+              <img src="img/catalog/slider-3.png" alt="Квадрокоптер с мощным лазером" width="526" height="334">
+            </div>
             <div class="slide-wrapper">
               <p class="slide__number">03</p>
               <p class="slide__title">Порхает как бабочка, жалит как пчела!</p>
               <p class="slide__text">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
               <a class="button" href="#">Подробнее</a>
               <table class="slide__table">
-                <tr>
-                  <th class="slide__table-title">Дальность полета</th>
-                  <th class="slide__table-title">Радиус поражения</th>
-                </tr>
-                <tr>
-                  <td class="slide__table-cell">800 м</td>
-                  <td class="slide__table-cell">50 м</td>
-                </tr>
+                <tbody class="slide__table-main">
+                  <tr class="slide__table-row-title">
+                    <th class="slide__table-title">Дальность полета</th>
+                    <th class="slide__table-title">Радиус поражения</th>
+                  </tr>
+                  <tr>
+                    <td class="slide__table-cell">800 м</td>
+                    <td class="slide__table-cell">50 м</td>
+                  </tr>
+                </tbody>
               </table>
             </div>
           </div>
@@ -227,24 +239,24 @@
         <h2>Бренды</h2>
 
         <ul class="brands-list">
-          <li class="brands-list__item">
-            <a class="brands-list__link" href="#">
-              <img class="brands-list__img" src="img/brand/dji.png" alt="Бренд DJI" width="260" height="100">
+          <li class="brands-list__item brands-list__item--dji-color">
+            <a class="brands-list__link brands-list__link--dji-color" href="#">
+              <img src="img/brand/dji.png" alt="Бренд DJI" width="260" height="100">
             </a>
           </li>
-          <li class="brands-list__item">
-            <a class="brands-list__link" href="#">
-              <img class="brands-list__img" src="img/brand/spgadjets.png" alt="Бренд SP Gadjets" width="260" height="100">
+          <li class="brands-list__item brands-list__item--gadjet-color">
+            <a class="brands-list__link brands-list__link--gadjet-color" href="#">
+              <img src="img/brand/spgadjets.png" alt="Бренд SP Gadjets" width="260" height="100">
             </a>
           </li>
-          <li class="brands-list__item">
-            <a class="brands-list__link" href="#">
-              <img class="brands-list__img" src="img/brand/go-pro.png" alt="Бренд GoPro" width="260" height="100">
+          <li class="brands-list__item brands-list__item--gopro-color">
+            <a class="brands-list__link brands-list__link--gopro-color" href="#">
+              <img src="img/brand/go-pro.png" alt="Бренд GoPro" width="260" height="100">
             </a>
           </li>
-          <li class="brands-list__item">
-            <a class="brands-list__link" href="#">
-              <img class="brands-list__img" src="img/brand/vive.png" alt="Бренд VIVE" width="260" height="100">
+          <li class="brands-list__item brands-list__item--vive-color">
+            <a class="brands-list__link brands-list__link--vive-color" href="#">
+              <img src="img/brand/vive.png" alt="Бренд VIVE" width="260" height="100">
             </a>
           </li>
         </ul>
@@ -253,14 +265,14 @@
       <div class="about-wrapper container">
         <section class="about">
           <h2 class="about__title">О нас</h2>
-          <p class="about__text">Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
-          <p class="about__text">Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
-          <ul class="about-list">
+          <p class="about__text">Огромный выбор гаджетов не оставит равнодушным гика,<br> который есть в каждом из нас.</p>
+          <p class="about__text about__text--indent">Мы можем доставить ваш товар в самые отдаленные точки<br> России! DEVICE работает со многими транспортными компаниями:</p>
+          <ul class="about-list about-list--indent">
             <li class="about-list__item">Деловые линии</li>
             <li class="about-list__item">Автотрейдинг</li>
             <li class="about-list__item">ЖелДорЭкспедиция</li>
           </ul>
-          <a class="button" href="#">Подробнее о нас</a>
+          <a class="button button--about" href="#">Подробнее о нас</a>
         </section>
 
         <section class="contacts">
@@ -269,7 +281,7 @@
           <a class="contacts__link" href="#">
             <img src="img/content/map.jpg" alt="Адрес магазина ул.Строителей 15" width="560" height="222">
           </a>
-          <a class="button" href="#">Напишите нам</a>
+          <a class="button button--contacts" href="#">Напишите нам</a>
         </section>
       </div>
     </main>
@@ -277,7 +289,7 @@
     <footer class="page-footer">
       <div class="footer-wrapper container">
         <div class="footer-container-logo">
-          <div class="logo">
+          <div class="logo logo--footer-indent">
             <a class="logo__link">
               <img src="img/icon/footer-logo.svg" width="163" height="35" alt="Логотип">
             </a>
@@ -286,7 +298,7 @@
         </div>
 
         <div class="footer-container-social">
-          <ul class="menu-list">
+          <ul class="menu-list menu-list--footer-align">
             <li class="menu-list__item">
               <a class="menu-list__link menu-list__link--footer" href="#">Доставка</a>
             </li>
@@ -326,7 +338,7 @@
         </div>
 
         <div class="footer-container-info">
-          <ul class="personal-list">
+          <ul class="personal-list personal-list--footer-align">
             <li class="personal-list__item">
               <a class="personal-list__link personal-list__link--footer" href="#">Войти</a>
             </li>
