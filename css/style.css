@@ -100,7 +100,10 @@ img {
 
 .page-header {
   margin-bottom: 40px;
-  background-color: var(--special-yellow);
+  background: linear-gradient(
+      var(--basic-white) 20px,
+      var(--special-yellow) 20px
+      );
 }
 
 .header-wrapper {
@@ -110,6 +113,10 @@ img {
 .logo {
   width: 163px;
   height: 35px;
+}
+
+.logo--indent {
+  margin-bottom: 30px;
 }
 
 .logo__link:hover,
@@ -122,8 +129,10 @@ img {
 }
 
 .block-wrapper {
-  display: grid;
-  grid-template-columns: 1fr min-content;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 50px;
 }
 
 /* Search */
@@ -167,9 +176,25 @@ img {
 /* Personal list */
 
 .personal-list {
+  display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+.personal-list--header-align {
+  justify-content: space-between;
+  width: 500px;
+}
+
+.personal-list__item--indent {
+  margin-left: auto;
+  margin-right: 63px;
+}
+
+.personal-list__item--username {
+  margin-right: 20px;
 }
 
 .personal-list__link {
@@ -198,6 +223,20 @@ img {
   list-style: none;
 }
 
+.menu-list__submenu {
+  margin-bottom: 46px;
+  padding-top: 12px;
+}
+
+.menu-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.menu-list--header-align {
+  justify-content: space-between;
+}
+
 .menu-list__link {
   font-family: "Gilroy", "Trebuchet MS", sans-serif;
   font-size: 18px;
@@ -207,8 +246,13 @@ img {
   letter-spacing: 0.2em;
 }
 
+.menu-list__link {
+  margin-bottom: 18px;
+}
+
 .menu-list__link,
 .submenu-list__link {
+  display: block;
   color: var(--basic-black);
 }
 
@@ -226,9 +270,9 @@ img {
 
 .submenu-list {
   display: grid;
-  grid-template-columns: repeat(3, 180px);
+  grid-template-columns: repeat(3, auto);
   grid-template-rows: repeat(3, 1fr);
-  column-gap: 40px;
+  column-gap: 61px;
   row-gap: 20px;
 }
 
@@ -266,12 +310,20 @@ img {
 }
 
 .slide {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 40px;
+  display: flex;
+}
+
+.slide__img,
+.slide-wrapper {
+  margin-left: auto;
+}
+
+.slide-wrapper {
+  width: 560px;
 }
 
 .slide__number {
+  margin: 0;
   font-family: "Gilroy", "Trebuchet MS", sans-serif;
   font-size: 179px;
   line-height: 219px;
@@ -282,6 +334,7 @@ img {
 }
 
 .slide__title {
+  margin: 0;
   font-family: "Gilroy", "Trebuchet MS", sans-serif;
   font-size: 47px;
   line-height: 58px;
@@ -292,7 +345,8 @@ img {
 
 .button {
   display: inline-block;
-  padding: 9px 43px;
+  padding-top: 9px;
+  padding-bottom: 9px;
   font-family: "Gilroy", "Trebuchet MS", sans-serif;
   font-size: 18px;
   line-height: 22px;
@@ -325,6 +379,15 @@ img {
 
 /* Slider Table */
 
+.slide__table-main {
+  display: flex;
+  flex-direction: column;
+}
+
+.slide__table-row-title {
+  order: 1;
+}
+
 .slide__table-cell,
 .slide__table-title {
   font-family: "Gilroy", "Trebuchet MS", sans-serif;
@@ -349,28 +412,30 @@ img {
 }
 
 .popular-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.popular-list__item {
-  background-color: var(--special-yellow);
-}
-
-.popular-list__item:hover,
-.popular-list__item:focus {
-  background-color: var(--special-yellow-dark);
-}
-
 .popular-list__link {
   display: block;
+  width: 160px;
+  height: 160px;
   font-family: "Gilroy", "Trebuchet MS", sans-serif;
   font-size: 18px;
   line-height: 22px;
   font-weight: 800;
   color: var(--basic-black);
+  background-color: var(--special-yellow);
   letter-spacing: 0.05em;
+}
+
+.popular-list__link:hover,
+.popular-list__link:focus {
+  background-color: var(--special-yellow-dark);
 }
 
 .popular-list__link:active {
@@ -428,6 +493,45 @@ img {
   list-style: none;
 }
 
+.brands-list__item {
+  width: 260px;
+  height: 100px;
+}
+
+.brands-list__link {
+  display: block;
+  width: inherit;
+  height: inherit;
+}
+
+.brands-list__item--dji-color:hover,
+.brands-list__item--dji-color:focus,
+.brands-list__link--dji-color:hover,
+.brands-list__link--dji-color:focus {
+  background-image: url("../img/brand/logo-1.png");
+}
+
+.brands-list__item--gadjet-color:hover,
+.brands-list__item--gadjet-color:focus,
+.brands-list__link--gadjet-color:hover,
+.brands-list__link--gadjet-color:focus {
+  background-image: url("../img/brand/logo-2.png");
+}
+
+.brands-list__item--gopro-color:hover,
+.brands-list__item--gopro-color:focus,
+.brands-list__link--gopro-color:hover,
+.brands-list__link--gopro-color:focus {
+  background-image: url("../img/brand/logo-3.png");
+}
+
+.brands-list__item--vive-color:hover,
+.brands-list__item--vive-color:focus,
+.brands-list__link--vive-color:hover,
+.brands-list__link--vive-color:focus {
+  background-image: url("../img/brand/logo-4.png");
+}
+
 /* About, Contacts */
 
 .about-wrapper {
@@ -435,9 +539,22 @@ img {
   grid-template-columns: 1fr 1fr;
 }
 
+.about__title,
+.contacts__title {
+  margin: 0;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
 .about__text,
 .contacts__text {
+  margin: 0;
+  margin-bottom: 40px;
   line-height: 28px;
+}
+
+.about__text--indent {
+  margin-bottom: 60px;
 }
 
 .about-list {
@@ -446,11 +563,33 @@ img {
   list-style: none;
 }
 
+.about-list--indent {
+  margin-bottom: 84px;
+}
+
 .about-list__item {
+  margin-bottom: 11px;
   font-family: "Gilroy", "Trebuchet MS", sans-serif;
   font-size: 16px;
   line-height: 28px;
   font-weight: 800;
+}
+
+.contacts__link {
+  display: block;
+  width: 560px;
+  height: 222px;
+  margin-bottom: 85px;
+}
+
+.button--about {
+  padding-left: 24px;
+  padding-right: 18px;
+}
+
+.button--contacts {
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
 /* Catalog */
@@ -482,10 +621,20 @@ img {
 /* Breadcrumbs */
 
 .breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
   margin: 0;
   margin-bottom: 50px;
   padding: 0;
   list-style: none;
+}
+
+.breadcrumbs__item {
+  margin-right: 20px;
+}
+
+.breadcrumbs__item--current {
+  margin-right: 0;
 }
 
 .breadcrumbs__link,
@@ -508,16 +657,29 @@ img {
 /* Filter */
 
 .catalog-filter {
+  position: relative;
   grid-row: 2/4;
+}
+
+.catalog-filter::before {
+  position: absolute;
+  top: 0;
+  right: 100%;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: inherit;
 }
 
 .catalog-filter,
 .sorting {
+  padding-top: 25px;
   background-color: var(--basic-grey-light);
 }
 
 .catalog-filter__title,
 .sorting__title {
+  margin: 0;
   font-family: "Gilroy", "Trebuchet MS", sans-serif;
   font-size: 16px;
   line-height: 20px;
@@ -526,14 +688,24 @@ img {
   letter-spacing: 0.1em;
 }
 
+.catalog-filter__title {
+  margin-bottom: 95px;
+}
+
 /* Form Catalog */
 
 .form__title {
+  margin: 0;
+  margin-bottom: 30px;
   font-family: "Gilroy", "Trebuchet MS", sans-serif;
   font-size: 14px;
   line-height: 17px;
   font-weight: 800;
   letter-spacing: 0.1em;
+}
+
+.form__fieldset {
+  border: none;
 }
 
 .price-selection__input {
@@ -553,20 +725,48 @@ img {
   line-height: 19px;
 }
 
+.form__item {
+  margin-bottom: 20px;
+}
+
 /* Sorting Catalog */
 
 .sorting {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   margin-bottom: 70px;
-  padding-left: 70px;
+  padding-left: 72px;
+}
+
+.sorting__title {
+  margin-right: 74px;
+  margin-bottom: 25px;
 }
 
 .sorting-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   margin: 0;
   padding: 0;
   list-style: none;
   font-size: 14px;
   line-height: 19px;
   font-weight: 400;
+}
+
+.sorting-list__item {
+  margin-right: 30px;
+}
+
+.sorting-list__item--indent {
+  margin-left: auto;
+  margin-right: 16px;
+}
+
+.sorting-list__item:last-child {
+  margin-right: 0;
 }
 
 .sorting-list__link {
@@ -590,26 +790,63 @@ img {
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 40px;
-  margin-left: 70px;
+  margin-left: 72px;
   margin-bottom: 80px;
+}
+
+.product-card {
+  position: relative;
+}
+
+.product-card__mark {
+  position: absolute;
+  content: "";
+  top: 29px;
+  right: 27px;
+}
+
+.mark {
+  width: 60px;
+  height: 60px;
+  font-family: "Gilroy", "Trebuchet MS", sans-serif;
+  font-size: 12px;
+  line-height: 60px;
+  font-weight: 800;
+  color: var(--basic-black);
+  border: 2px solid var(--basic-black);
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 50%;
+  overflow: hidden;
+  opacity: 0.3;
+}
+
+.mark--hidden {
+  display: none;
 }
 
 .product-card__img {
   width: 360px;
   height: 380px;
+  margin-bottom: 30px;
   background-color: var(--basic-grey-light);
 }
 
 .product-card__link {
+  width: 270px;
   color: var(--basic-black);
 }
 
 .product-card__desc {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   font-family: "Gilroy", "Trebuchet MS", sans-serif;
   letter-spacing: 0.05em;
 }
 
 .product-card__title {
+  margin: 0;
   font-size: 18px;
   line-height: 22px;
   font-weight: 800;
@@ -643,6 +880,10 @@ img {
 /* Pagination */
 
 .pagination-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
   grid-column: 1/-1;
   margin: 0;
   padding: 0;
@@ -654,6 +895,24 @@ img {
   background-color: var(--background-pagination);
   text-transform: uppercase;
   letter-spacing: 0.1em;
+}
+
+.pagination-list__item {
+  margin-right: 30px;
+}
+
+.pagination-list__item:first-child,
+.pagination-list__item:last-child {
+  margin-right: 0;
+}
+
+.pagination-list__item--indent {
+  margin-left: auto;
+}
+
+.pagination-list__link--prev-next {
+  display: block;
+  padding: 25px 30px;
 }
 
 .pagination-list__link--prev-next:hover,
@@ -692,34 +951,36 @@ img {
 .footer-wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  margin-bottom: 64px;
 }
 
-.footer-container-social {
-  justify-self: center;
+/* Footer Logo Container */
+
+.footer-container-logo {
+  padding-top: 64px;
 }
 
-.footer-container-info {
-  justify-self: end;
-}
-
-.personal-list__link--footer {
-  color: var(--basic-white);
-  opacity: 0.7;
-}
-
-.personal-list__link--footer:hover,
-.personal-list__link--footer:focus {
-  opacity: 1;
-}
-
-.personal-list__link--footer:active {
-  opacity: 0.3;
+.logo--footer-indent {
+  margin-bottom: 40px;
 }
 
 .footer-address {
   font-style: normal;
   color: var(--basic-white);
+}
+
+/* Footer Social Container */
+
+.footer-container-social {
+  justify-self: center;
+  width: 423px;
+  padding-top: 138px;
+  padding-bottom: 65px;
+  text-align: center;
+}
+
+.menu-list--footer-align {
+  justify-content: space-between;
+  margin-bottom: 67px;
 }
 
 .menu-list__link--footer {
@@ -735,14 +996,12 @@ img {
   opacity: 0.3;
 }
 
-.footer-phone {
-  display: block;
-  color: var(--basic-white);
-}
-
 /* Social */
 
 .social-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -764,6 +1023,43 @@ img {
 
 .social-list__link:active {
   opacity: 0.1;
+}
+
+/* Footer Info Container */
+
+.footer-container-info {
+  position: relative;
+  justify-self: end;
+  padding-top: 46px;
+  text-align: right;
+}
+
+.personal-list--footer-align {
+  position: absolute;
+  left: -280px;
+  width: 480px;
+  justify-content: space-between;
+}
+
+.personal-list__link--footer {
+  color: var(--basic-white);
+  opacity: 0.7;
+}
+
+.personal-list__link--footer:hover,
+.personal-list__link--footer:focus {
+  opacity: 1;
+}
+
+.personal-list__link--footer:active {
+  opacity: 0.3;
+}
+
+.footer-phone {
+  display: block;
+  margin-bottom: 68px;
+  padding-top: 92px;
+  color: var(--basic-white);
 }
 
 .layout-developer {
