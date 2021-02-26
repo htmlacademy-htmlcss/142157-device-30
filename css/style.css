@@ -491,6 +491,10 @@ img {
   margin-bottom: 20px;
 }
 
+.submenu-list--visible:focus-within {
+  z-index: 1;
+}
+
 /* Main */
 
 .page-main {
@@ -1637,6 +1641,10 @@ img {
   z-index: 1;
 }
 
+.product-card__overlay:focus-within {
+  z-index: 1;
+}
+
 /* Pagination */
 
 .pagination-list {
@@ -1725,7 +1733,7 @@ img {
 .footer-wrapper {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[3];
+  -ms-grid-columns: 1fr 1fr 1fr;
   grid-template-columns: repeat(3, 1fr);
   padding-bottom: 65px;
 }
