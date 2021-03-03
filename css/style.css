@@ -286,9 +286,12 @@ img {
   color: var(--basic-black);
 }
 
-.personal-list__link:hover,
-.personal-list__link:focus {
+.personal-list__link:hover {
   color: rgba(0, 0, 0, 0.6);
+}
+
+.personal-list__link:focus {
+  opacity: 0.6;
 }
 
 .personal-list__link:active {
@@ -583,7 +586,7 @@ img {
   content: "";
   position: absolute;
   top: 51px;
-  left: 0;
+  left: 25px;
   width: 100px;
   height: 7px;
   background-color: var(--basic-white);
@@ -850,10 +853,6 @@ img {
   padding-top: 80px;
   padding-bottom: 61px;
   border-right: 7px solid black;
-}
-
-.services__input {
-  display: none;
 }
 
 .services-controls__label {
@@ -1472,7 +1471,7 @@ img {
 }
 
 .sorting-list__link:hover,
-.personal-list__link:focus {
+.sorting-list__link:focus {
   opacity: 0.6;
 }
 
