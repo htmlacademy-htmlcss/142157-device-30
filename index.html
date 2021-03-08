@@ -22,7 +22,7 @@
           </a>
         </div>
         <div class="block-wrapper">
-          <form class="search" action="https://echo.htmlacademy.ru" method="get" target="_blank" autocomplete="off">
+          <form class="search" action="https://echo.htmlacademy.ru" method="post" target="_blank" autocomplete="off">
             <label class="search__label visually-hidden" for="search-field">Поиск</label>
             <input class="search__input" id="search-field" type="text" name="search" placeholder="Поиск по сайту" autocomplete="off" required>
             <button class="search__button" type="submit">Найти</button>
@@ -92,77 +92,86 @@
             <button class="slider-controls__button" type="button" aria-label="Третий слайд"></button>
           </div>
 
-          <div class="slide">
-            <div class="slide__img">
-              <img class="slide__pic" src="img/catalog/slider-1.png" alt="Самая длинная палка для селфи" width="384" height="486">
-            </div>
-            <div class="slide-wrapper">
-              <p class="slide__number">01</p>
-              <p class="slide__title">Делай селфи,<br> как Бен Стиллер!</p>
-              <p class="slide__text">Самая длинная палка для селфи доступна в нашем магазине.<br>
-                Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
-              </p>
-              <a class="button button__slide" href="#">Подробнее</a>
-              <table class="slide__table">
-                <tbody class="slide__table-main">
-                  <tr class="slide__table-row">
-                    <th class="slide__table-title">Длина палки</th>
-                    <td class="slide__table-cell">8,5 м</td>
-                  </tr>
-                  <tr class="slide__table-row">
-                    <th class="slide__table-title">Вес палки</th>
-                    <td class="slide__table-cell">5 кг</td>
-                  </tr>
-                  <tr class="slide__table-row">
-                    <th class="slide__table-title">Материал</th>
-                    <td class="slide__table-cell">Карбон</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-          <div class="slide slide--hidden">
-            <div class="slide__img">
-              <img class="slide__pic" src="img/catalog/slider-2.png" alt="Мотивирующий фитнес-браслет" width="345" height="485">
-            </div>
-            <div class="slide-wrapper">
-              <p class="slide__number">02</p>
-              <p class="slide__title">Худеем<br> правильно!</p>
-              <p class="slide__text">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
-              <a class="button button__slide" href="#">Подробнее</a>
-              <table class="slide__table">
-                <tbody class="slide__table-main">
-                  <tr class="slide__table-row">
-                    <th class="slide__table-title">Без подзарядки</th>
-                    <td class="slide__table-cell">48 часов</td>
-                  </tr>
-                </tbody>
-              </table>
+          <div class="sliders__container sliders__container--current">
+            <div class="slide">
+              <div class="slide__img">
+                <img class="slide__pic" src="img/catalog/slider-1.png" alt="Самая длинная палка для селфи" width="384" height="486">
+              </div>
+              <div class="slide-wrapper">
+                <p class="slide__number">01</p>
+                <p class="slide__title">Делай селфи,<br> как Бен Стиллер!</p>
+                <p class="slide__text">Самая длинная палка для селфи доступна в нашем магазине.<br>
+                  Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
+                </p>
+                <a class="button button__slide" href="#">Подробнее</a>
+                <table class="slide__table">
+                  <tbody class="slide__table-main">
+                    <tr class="slide__table-row">
+                      <th class="slide__table-title">Длина палки</th>
+                      <td class="slide__table-cell">8,5 м</td>
+                    </tr>
+                    <tr class="slide__table-row">
+                      <th class="slide__table-title">Вес палки</th>
+                      <td class="slide__table-cell">5 кг</td>
+                    </tr>
+                    <tr class="slide__table-row">
+                      <th class="slide__table-title">Материал</th>
+                      <td class="slide__table-cell">Карбон</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
-          <div class="slide slide--hidden">
-            <div class="slide__img">
-              <img class="slide__pic" src="img/catalog/slider-3.png" alt="Квадрокоптер с мощным лазером" width="526" height="334">
-            </div>
-            <div class="slide-wrapper">
-              <p class="slide__number">03</p>
-              <p class="slide__title">Порхает как бабочка, жалит как пчела!</p>
-              <p class="slide__text">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
-              <a class="button button__slide" href="#">Подробнее</a>
-              <table class="slide__table">
-                <tbody class="slide__table-main">
-                  <tr class="slide__table-row">
-                    <th class="slide__table-title">Дальность полета</th>
-                    <td class="slide__table-cell">800 м</td>
-                  </tr>
-                  <tr class="slide__table-row">
-                    <th class="slide__table-title">Радиус поражения</th>
-                    <td class="slide__table-cell">50 м</td>
-                  </tr>
-                </tbody>
-              </table>
+
+          <div class="sliders__container">
+            <div class="slide">
+              <div class="slide__img">
+                <img class="slide__pic" src="img/catalog/slider-2.png" alt="Мотивирующий фитнес-браслет" width="345" height="485">
+              </div>
+              <div class="slide-wrapper">
+                <p class="slide__number">02</p>
+                <p class="slide__title">Худеем<br> правильно!</p>
+                <p class="slide__text">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
+                <a class="button button__slide" href="#">Подробнее</a>
+                <table class="slide__table">
+                  <tbody class="slide__table-main">
+                    <tr class="slide__table-row">
+                      <th class="slide__table-title">Без подзарядки</th>
+                      <td class="slide__table-cell">48 часов</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
+
+          <div class="sliders__container">
+            <div class="slide">
+              <div class="slide__img">
+                <img class="slide__pic" src="img/catalog/slider-3.png" alt="Квадрокоптер с мощным лазером" width="526" height="334">
+              </div>
+              <div class="slide-wrapper">
+                <p class="slide__number">03</p>
+                <p class="slide__title">Порхает как бабочка, жалит как пчела!</p>
+                <p class="slide__text">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
+                <a class="button button__slide" href="#">Подробнее</a>
+                <table class="slide__table">
+                  <tbody class="slide__table-main">
+                    <tr class="slide__table-row">
+                      <th class="slide__table-title">Дальность полета</th>
+                      <td class="slide__table-cell">800 м</td>
+                    </tr>
+                    <tr class="slide__table-row">
+                      <th class="slide__table-title">Радиус поражения</th>
+                      <td class="slide__table-cell">50 м</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
         </div>
 
         <ul class="popular-list">
@@ -234,22 +243,22 @@
         <ul class="brands-list">
           <li class="brands-list__item brands-list__item--dji-color">
             <a class="brands-list__link brands-list__link--dji-color" href="#">
-              <img src="img/brand/dji.png" alt="Бренд DJI" width="260" height="100">
+              <img src="img/brand/dji.png" alt="Бренд DJI" width="260" height="100" loading="lazy">
             </a>
           </li>
           <li class="brands-list__item brands-list__item--gadjet-color">
             <a class="brands-list__link brands-list__link--gadjet-color" href="#">
-              <img src="img/brand/spgadjets.png" alt="Бренд SP Gadjets" width="260" height="100">
+              <img src="img/brand/spgadjets.png" alt="Бренд SP Gadjets" width="260" height="100" loading="lazy">
             </a>
           </li>
           <li class="brands-list__item brands-list__item--gopro-color">
             <a class="brands-list__link brands-list__link--gopro-color" href="#">
-              <img src="img/brand/go-pro.png" alt="Бренд GoPro" width="260" height="100">
+              <img src="img/brand/go-pro.png" alt="Бренд GoPro" width="260" height="100" loading="lazy">
             </a>
           </li>
           <li class="brands-list__item brands-list__item--vive-color">
             <a class="brands-list__link brands-list__link--vive-color" href="#">
-              <img src="img/brand/vive.png" alt="Бренд VIVE" width="260" height="100">
+              <img src="img/brand/vive.png" alt="Бренд VIVE" width="260" height="100" loading="lazy">
             </a>
           </li>
         </ul>
@@ -272,9 +281,9 @@
           <h2 class="contacts__title">Контакты</h2>
           <p class="contacts__text">Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
           <a class="contacts__link" href="#">
-            <img src="img/content/map.jpg" alt="Адрес магазина ул.Строителей 15" width="560" height="222">
+            <img src="img/content/map.jpg" alt="Адрес магазина ул.Строителей 15" width="560" height="222" loading="lazy">
           </a>
-          <a class="button button--contacts" href="#">Напишите нам</a>
+          <button type="button" class="button button--contacts" href="#">Напишите нам</button>
         </section>
       </div>
     </main>
@@ -350,19 +359,19 @@
 
     <section class="modal modal-feedback-js">
       <h2 class="visually-hidden">Обратная связь</h2>
-      <form class="feedback-form" action="https://echo.htmlacademy.ru" method="get">
+      <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post" target="_blank">
         <div class="feedback-form-wrapper">
           <p class="feedback-form__fields">
             <label class="feedback-form__label" for="user-name">Ваше имя:</label>
-            <input class="feedback-form__input" type="text" name="name" id="user-name" placeholder="Имя Фамилия">
+            <input class="feedback-form__input feedback-form__input-name-js" type="text" name="name" id="user-name" pattern="^[A-Za-zА-Яа-яЁё\s]+$" placeholder="Имя Фамилия">
           </p>
           <p class="feedback-form__fields">
             <label class="feedback-form__label" for="user-email">Ваш e-mail:</label>
-            <input class="feedback-form__input" type="email" name="email" id="user-email" placeholder="email@example.com">
+            <input class="feedback-form__input feedback-form__input-email-js" type="email" name="email" id="user-email" placeholder="email@example.com">
           </p>
           <div class="feedback-form__fields-large">
             <label class="feedback-form__label" for="user-text">Текст письма:</label>
-            <textarea class="feedback-form__textarea" name="text" id="user-text" placeholder="В свободной форме"></textarea>
+            <textarea class="feedback-form__textarea feedback-form__textarea-js" name="text" id="user-text" placeholder="В свободной форме"></textarea>
           </div>
          <button class="button feedback__button" type="submit">Отправить</button>
         </div>
@@ -376,5 +385,6 @@
       <button class="modal__button-close modal__button-close--map" type="button" aria-label="Закрыть"></button>
     </section>
 
+    <script src="js/script.js"></script>
   </body>
 </html>

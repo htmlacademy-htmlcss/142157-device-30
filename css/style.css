@@ -548,6 +548,14 @@ img {
   background-color: var(--basic-white);
 }
 
+.sliders__container {
+  display: none;
+}
+
+.sliders__container--current {
+  display: block;
+}
+
 .slide {
   display: -ms-grid;
   display: grid;
@@ -561,10 +569,6 @@ img {
     var(--special-yellow) 146px,
     var(--basic-white) 146px
   );
-}
-
-.slide--hidden {
-  display: none;
 }
 
 .slide__img {
@@ -2003,6 +2007,15 @@ img {
   z-index: 10;
 }
 
+.modal-show-js {
+  display: block;
+  animation: bounce 0.5s;
+}
+
+.modal-err-js {
+  animation: shake 0.5s;
+}
+
 .feedback-form-wrapper {
   position: relative;
   padding: 92px 100px 60px;
@@ -2151,4 +2164,41 @@ img {
 .modal__button-close--map {
   top: 29px;
   right: 2px;
+}
+
+/* Animation */
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-3000px);
+  }
+
+  70% {
+    transform: translateY(20px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  20%,
+  60% {
+    transform: translateX(-10px);
+  }
+
+  40%,
+  80% {
+    transform: translateX(10px);
+  }
 }
