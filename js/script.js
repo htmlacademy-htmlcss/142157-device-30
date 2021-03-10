@@ -79,13 +79,11 @@ closeModalMap.addEventListener("click", function (evt) {
  */
 
 window.addEventListener("keydown", function (evt) {
-  if (evt.keyCode === 27) {
-    if (modalFeedback.classList.contains("modal-show-js") || modalMap.classList.contains("modal-show-js")) {
+  if (evt.keyCode === 27 && modalFeedback.classList.contains("modal-show-js") || modalMap.classList.contains("modal-show-js")) {
       evt.preventDefault();
       modalFeedback.classList.remove("modal-show-js");
       modalFeedback.classList.remove("modal-err-js");
       modalMap.classList.remove("modal-show-js");
-    }
   }
 });
 
