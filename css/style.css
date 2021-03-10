@@ -83,6 +83,7 @@
   font-weight: 300;
   color: var(--basic-black);
   background-color: var(--basic-white);
+  overflow-x: hidden;
 }
 
 a {
@@ -1420,6 +1421,7 @@ img {
 /* Sorting Catalog */
 
 .sorting {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1433,6 +1435,16 @@ img {
   padding-left: 72px;
 }
 
+.sorting::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 100%;
+  background-color: var(--basic-grey-light);
+  z-index: -1;
+}
+
 .sorting__title {
   margin-right: 74px;
   margin-bottom: 25px;
@@ -1444,9 +1456,9 @@ img {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   margin: 0;
   padding: 0;
   list-style: none;
